@@ -1,0 +1,8 @@
+.halign {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.halign .hcontent {
+    flex: 1 0 33%;
+}
