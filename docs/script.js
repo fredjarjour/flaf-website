@@ -38,7 +38,7 @@ fh_fl_sc = [
 });
 
 mm_5l_ns = [
-    ["Fred", "2:32.620"]
+
 ].sort((a, b) => {
     const timeA = timeStringToSeconds(a[1]);
     const timeB = timeStringToSeconds(b[1]);
@@ -78,7 +78,7 @@ sh_5l_ns = [
 });
 
 sh_fl_ns = [
-    ["Fred", "0:30.319"]
+    
 ].sort((a, b) => {
     const timeA = timeStringToSeconds(a[1]);
     const timeB = timeStringToSeconds(b[1]);
