@@ -1,8 +1,46 @@
-.halign {
+body {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    height:100%;
+    margin:0;
 }
 
-.halign .hcontent {
-    flex: 1 0 33%;
+.sidebar {
+    flex: 0 0 15%;
+    height: 100vh;
+    background-color: rgb(211, 211, 211);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.category {
+    background-color: rgb(190, 190, 190);
+}
+
+.content {
+    flex-direction: column;
+    text-align: center;
+    width: 85%;
+    align-items: flex-start;
+}
+
+.content table {
+    width: 100%;
+    flex-direction: column;
+}
+
+.trackimg {
+    width: 100%;
+}
+
+.leaderboards {
+    flex-direction: row;
+}
+
+.lb {
+    flex-direction: column;
+    width: 25%;
 }
