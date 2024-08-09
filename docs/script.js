@@ -59,7 +59,7 @@ mm_5l_sc = [
 
 mm_fl_sc = [
     ["Stascious", "35.396", "https://www.youtube.com/watch?v=3OwcpmREiBk"],
-    ["MyntiFresh", "35.596", "https://www.youtube.com/watch?v=ToUKwzyUnWI"]
+    ["MyntiFresh", "34.801", "https://www.youtube.com/watch?v=v46CsZ8RoXE"]
 ];
 
 mm_5l_us = [
