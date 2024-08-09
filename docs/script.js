@@ -1,7 +1,13 @@
 function timeStringToSeconds(timeString) {
-    const [minutes, seconds] = timeString.split(':');
-    const [wholeSeconds, fraction] = seconds.split('.');
-    return Number(minutes) * 60 + Number(wholeSeconds) + Number(fraction) / 1000;
+    // If it doesnt have a colon, it's just seconds
+    if (!timeString.includes(':')) {
+        return Number(timeString);
+    }
+
+    const timeParts = timeString.split(':');
+    const minutes = Number(timeParts[0]);
+    const seconds = Number(timeParts[1]);
+    return minutes * 60 + seconds;
 }
 
 // Leaderboards
