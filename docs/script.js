@@ -16,7 +16,7 @@ fh_5l_ns = [
 fh_fl_ns = [
     ["Decoy", "24.025", ""],
     ["Silhouette", "24.772", ""],
-    ["Fred", "26.216", "https://www.youtube.com/watch?v=_Fy-R6qh5QA"]
+    ["Fred", "25.867", "https://youtu.be/qC1-KHJw4Qs"]
 ];
 
 fh_5l_sc = [
