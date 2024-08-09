@@ -1,6 +1,7 @@
 function timeStringToSeconds(timeString) {
-    const [minutes, seconds] = timeString.split(':').map(Number);
-    return minutes * 60 + seconds;
+    const [minutes, seconds] = timeString.split(':');
+    const [wholeSeconds, fraction] = seconds.split('.');
+    return Number(minutes) * 60 + Number(wholeSeconds) + Number(fraction) / 1000;
 }
 
 // Leaderboards
