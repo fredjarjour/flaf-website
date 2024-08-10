@@ -35,11 +35,31 @@ a {
     width: 100%;
 }
 
-.leaderboards {
-    flex-direction: row;
+.title {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.lbs {
+    height: 90%;
 }
 
 .lb {
-    flex-direction: column;
-    width: 25%;
+    vertical-align: top;
+    width: 16.6666666667%;
+}
+
+.lb1, .lb4 {
+    background-color: #c5d8f3;
+}
+
+.lb2, .lb5 {
+    background-color: #feebc8;
+}
+
+.lb3, .lb6 {
+    background-color: #fbc5d4;
 }
