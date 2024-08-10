@@ -17,13 +17,15 @@ function timeStringToSeconds(timeString) {
 
 fh_5l_ns = [
     ["Decoy", "2:10.901", ""],
-    ["Silhouette", "2:13.276", ""]
+    ["Silhouette", "2:13.276", ""],
+    ["Rinify", "2:05.049", "https://www.youtube.com/watch?v=3lV6rkiNaOo"],
+    ["Fred", "2:17.933", ""]
 ];
 
 fh_fl_ns = [
     ["Decoy", "24.025", ""],
     ["Silhouette", "24.772", ""],
-    ["Fred", "25.867", "https://youtu.be/qC1-KHJw4Qs"]
+    ["Fred", "25.040", ""]
 ];
 
 fh_5l_sc = [
@@ -50,7 +52,8 @@ mm_5l_ns = [
 ];
 
 mm_fl_ns = [
-    ["Silhouette", "46.967", ""]
+    ["Silhouette", "43.883", "https://www.youtube.com/watch?v=GBuF2FYzmY4"],
+    ["Decoy", "44.634", ""]
 ];
 
 mm_5l_sc = [
