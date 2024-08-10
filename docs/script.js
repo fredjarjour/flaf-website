@@ -111,6 +111,44 @@ all_lists.forEach(list => {
     });
 });
 
+
+// Home page WRs
+
+function load_home_wrs(lists, categories, name) {
+    var ih = "<h3>World Records</h3><table><tr><th>Category</th><th>Player</th><th>Time</th></tr>";
+    for (i = 0; i < lists.length; i++) {
+        if (lists[i].length == 0) {
+            continue;
+        }
+
+        ih += "<tr><td>" + categories[i] + "</td><td>" + lists[i][0][0] + "</td><td>" + lists[i][0][1] + "</td></tr>";
+    }
+    ih += "</table>";
+
+    document.getElementById(name).innerHTML = ih;
+}
+
+function load_home() {
+    load_home_wrs(
+        [fh_5l_ns, fh_5l_sc, fh_5l_us, fh_fl_ns, fh_fl_sc, fh_fl_us],
+        ["5lap - No Shortcut", "5lap - Shortcut", "5lap - Ultra Shortcut", "Flap - No Shortcut", "Flap - Shortcut", "Flap - Ultra Shortcut"],
+        "wrs_fh"
+    );
+
+    load_home_wrs(
+        [mm_5l_ns, mm_5l_sc, mm_5l_us, mm_fl_ns, mm_fl_sc, mm_fl_us],
+        ["5lap - No Shortcut", "5lap - Shortcut", "5lap - Ultra Shortcut", "Flap - No Shortcut", "Flap - Shortcut", "Flap - Ultra Shortcut"],
+        "wrs_mm"
+    );
+
+    load_home_wrs(
+        [sh_5l_ns, sh_5l_sc, sh_5l_us, sh_fl_ns, sh_fl_sc, sh_fl_us],
+        ["5lap - No Shortcut", "5lap - Shortcut", "5lap - Ultra Shortcut", "Flap - No Shortcut", "Flap - Shortcut", "Flap - Ultra Shortcut"],
+        "wrs_sh"
+    );
+}
+
+
 // Load leaderboards
 
 function load_backend(lists, names, titles) {
