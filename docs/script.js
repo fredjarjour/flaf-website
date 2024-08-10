@@ -63,11 +63,14 @@ mm_fl_sc = [
 ];
 
 mm_5l_us = [
-
+    ["dxtrpog", "25.591",  "https://youtu.be/HBaMMVBdt5o"],
+    ["Silhouette", "47.938",  "https://youtu.be/e-4qPSoF-7c"]
 ];
 
 mm_fl_us = [
-    ["Esse", "22.329", ""]
+    ["Esse", "22.329", ""],
+    ["dxtrpog", "1.367",  "https://youtu.be/EoSNctH5PbQ"],
+    ["Silhouette", "2.150",  "https://youtu.be/49-gAHGvNAA"]
 ];
 
 
