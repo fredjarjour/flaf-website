@@ -19,6 +19,10 @@ a {
     background-color: rgb(190, 190, 190);
 }
 
+.sidebartitle {
+    margin: 5% 0;
+}
+
 .content {
     flex-direction: column;
     text-align: center;
