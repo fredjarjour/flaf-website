@@ -19,7 +19,8 @@ fh_5l_ns = [
     ["Decoy", "2:10.901", ""],
     ["Silhouette", "2:13.276", ""],
     ["Rinify", "2:05.049", "https://www.youtube.com/watch?v=3lV6rkiNaOo"],
-    ["Fred", "2:17.933", ""]
+    ["Fred", "2:17.933", ""],
+    ["Gavin", "2:19.847", "https://www.youtube.com/watch?v=HvQ4-pAQLyw"]
 ];
 
 fh_fl_ns = [
