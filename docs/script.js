@@ -24,9 +24,9 @@ fh_5l_ns = [
 ];
 
 fh_fl_ns = [
-    ["Decoy", "24.025", ""],
     ["Silhouette", "24.772", ""],
-    ["Fred", "25.882", ""]
+    ["Fred", "25.882", ""],
+    ["Decoy", "23.967",  "https://youtu.be/h2Sk5oqIBIc"]
 ];
 
 fh_5l_sc = [
@@ -49,7 +49,7 @@ fh_fl_us = [
 // Midnight Motorist
 
 mm_5l_ns = [
-    ["Silhouette", "3:55.899", ""]
+    ["Silhouette", "3:48.740",  "https://youtu.be/ASFgY8zsQT4"]
 ];
 
 mm_fl_ns = [
@@ -97,7 +97,8 @@ sh_fl_sc = [
 ];
 
 sh_5l_us = [
-    ["Silhouette", "54.793", ""]
+    ["Silhouette", "54.793", ""],
+    ["The_BLJ_Elite", "28.833",  "https://www.youtube.com/watch?v=AdR5bw3JaRc"]
 ];
 
 sh_fl_us = [
