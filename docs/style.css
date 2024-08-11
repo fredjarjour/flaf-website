@@ -67,3 +67,7 @@ a {
 .lb3, .lb6 {
     background-color: #fbc5d4;
 }
+
+.trackpanel {
+    vertical-align: top;
+}
