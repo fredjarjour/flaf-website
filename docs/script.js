@@ -20,7 +20,8 @@ fh_5l_ns = [
     ["Silhouette", "2:13.276", ""],
     ["Rinify", "2:05.049", "https://www.youtube.com/watch?v=3lV6rkiNaOo"],
     ["Fred", "2:17.933", ""],
-    ["Gavin", "2:19.847", "https://www.youtube.com/watch?v=HvQ4-pAQLyw"]
+    ["Gavin", "2:19.847", "https://www.youtube.com/watch?v=HvQ4-pAQLyw"],
+    ["JDFRG", "2:29.538", "https://www.youtube.com/watch?v=h4wegL-yhpI"]
 ];
 
 fh_fl_ns = [
@@ -81,7 +82,8 @@ mm_fl_us = [
 // Sinkhole
 
 sh_5l_ns = [
-    ["Decoy", "3:23.581", ""]
+    ["Decoy", "3:23.581", ""],
+    ["JDFRG", "4:20.310", "https://www.youtube.com/watch?v=SEKfICRoAxQ&t=4970s"]
 ];
 
 sh_fl_ns = [
