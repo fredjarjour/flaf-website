@@ -18,7 +18,7 @@ function timeStringToSeconds(timeString) {
 fh_5l_ns = [
     ["Decoy", "2:10.901", ""],
     ["Silhouette", "2:13.276", ""],
-    ["Rinify", "2:05.049", "https://www.youtube.com/watch?v=3lV6rkiNaOo"],
+    ["Rinify", "1:58.199", "https://www.youtube.com/watch?v=oVw5Eg3gQ8k"],
     ["Fred", "2:17.933", ""],
     ["Gavin", "2:19.847", "https://www.youtube.com/watch?v=HvQ4-pAQLyw"],
     ["JDFRG", "2:29.538", "https://www.youtube.com/watch?v=h4wegL-yhpI"]
@@ -27,7 +27,8 @@ fh_5l_ns = [
 fh_fl_ns = [
     ["Silhouette", "24.772", ""],
     ["Fred", "24.882", ""],
-    ["Decoy", "23.967",  "https://youtu.be/h2Sk5oqIBIc"]
+    ["Decoy", "23.967",  "https://youtu.be/h2Sk5oqIBIc"],
+    ["Rinify", "23.200", "https://www.youtube.com/watch?v=oVw5Eg3gQ8k"]
 ];
 
 fh_5l_sc = [
@@ -54,7 +55,7 @@ mm_5l_ns = [
 ];
 
 mm_fl_ns = [
-    ["Silhouette", "43.883", "https://www.youtube.com/watch?v=GBuF2FYzmY4"],
+    ["Silhouette", "42.300", "https://www.youtube.com/watch?v=dqF-avRpWT8"],
     ["Decoy", "44.634", ""]
 ];
 
@@ -104,7 +105,8 @@ sh_5l_us = [
 ];
 
 sh_fl_us = [
-    ["Silhouette", "3.589", ""]
+    ["Silhouette", "3.589", ""],
+    ["The_BLJ_Elite", "1.150",  "https://www.youtube.com/watch?v=cmKW_wPXWcY"]
 ];
 
 
