@@ -1,3 +1,4 @@
+//#region Helper Functions
 function timeStringToSeconds(timeString) {
     // If it doesnt have a colon, it's just seconds
     if (!timeString.includes(':')) {
@@ -9,221 +10,336 @@ function timeStringToSeconds(timeString) {
     const seconds = Number(timeParts[1]);
     return minutes * 60 + seconds;
 }
+//#endregion Helper Functions
 
-// Leaderboards
+//#region Classes
+class Track {
+    constructor(name) {
+        this.name = name;
+        
+        this.categories = new Map();
+        this.categories.set("5lap - No Shortcut", []);
+        this.categories.set("5lap - Shortcut", []);
+        this.categories.set("5lap - Ultra Shortcut", []);
+        this.categories.set("Flap - No Shortcut", []);
+        this.categories.set("Flap - Shortcut", []);
+        this.categories.set("Flap - Ultra Shortcut", []);
+    }
+}
 
+class Category {
+    constructor(name) {
+        this.name = name;
 
-// Fazbear Hills
+        this.categories = new Map();
+        this.categories.set("No Shortcut", []);
+        this.categories.set("Shortcut", []);
+        this.categories.set("Ultra Shortcut", []);
+    }
+}
+// #endregion Classes
 
-fh_5l_ns = [
+//#region Demo Version
+
+const fh_demo = new Track("Fazbear Hills");
+const mm_demo = new Track("Midnight Motorist");
+const sh_demo = new Track("Sinkhole");
+
+const at_demo = new Category("All Tracks");
+
+//#region Fazbear Hills
+fh_demo.categories.get("5lap - No Shortcut").push(...[
     ["Decoy", "2:10.901", ""],
     ["Silhouette", "2:13.276", ""],
     ["Rinify", "1:58.199", "https://www.youtube.com/watch?v=oVw5Eg3gQ8k"],
     ["Fred", "2:11.918", "https://www.youtube.com/watch?v=gm57r_DxcfY"],
     ["Gavin", "2:19.847", "https://www.youtube.com/watch?v=HvQ4-pAQLyw"],
     ["JDFRG", "2:29.538", "https://www.youtube.com/watch?v=h4wegL-yhpI"]
-];
+]);
 
-fh_fl_ns = [
+fh_demo.categories.get("Flap - No Shortcut").push(...[
     ["Silhouette", "24.772", ""],
     ["Fred", "23.860", "https://www.youtube.com/watch?v=gm57r_DxcfY"],
     ["Decoy", "23.967",  "https://youtu.be/h2Sk5oqIBIc"],
     ["Rinify", "23.200", "https://www.youtube.com/watch?v=oVw5Eg3gQ8k"]
-];
+]);
 
-fh_5l_sc = [
+fh_demo.categories.get("5lap - Shortcut").push(...[
 
-];
+]);
 
-fh_fl_sc = [
+fh_demo.categories.get("Flap - Shortcut").push(...[
 
-];
+]);
 
-fh_5l_us = [
+fh_demo.categories.get("5lap - Ultra Shortcut").push(...[
     ["Weasel", "38.627", ""]
-];
+]);
 
-fh_fl_us = [
+fh_demo.categories.get("Flap - Ultra Shortcut").push(...[
     ["Weasel", "3.628", ""]
-];
+]);
+//#endregion Fazbear Hills
 
-
-// Midnight Motorist
-
-mm_5l_ns = [
+//#region Midnight Motorist
+mm_demo.categories.get("5lap - No Shortcut").push(...[
     ["Silhouette", "3:48.740",  "https://youtu.be/ASFgY8zsQT4"]
-];
+]);
 
-mm_fl_ns = [
+mm_demo.categories.get("Flap - No Shortcut").push(...[
     ["Silhouette", "42.300", "https://www.youtube.com/watch?v=dqF-avRpWT8"],
     ["Decoy", "44.634", ""]
-];
+]);
 
-mm_5l_sc = [
+mm_demo.categories.get("5lap - Shortcut").push(...[
     ["Rinify", "3:10.999", ""]
-];
+]);
 
-mm_fl_sc = [
+mm_demo.categories.get("Flap - Shortcut").push(...[
     ["MyntiFresh", "34.262", "https://youtu.be/gaXgvwPLkS8"],
     ["Stasious", "33.296",  "https://youtu.be/1RPBnmSQ4vo"]
-];
+]);
 
-mm_5l_us = [
+mm_demo.categories.get("5lap - Ultra Shortcut").push(...[
     ["dxtrpog", "25.591",  "https://youtu.be/HBaMMVBdt5o"],
     ["Silhouette", "47.938",  "https://youtu.be/e-4qPSoF-7c"]
-];
+]);
 
-mm_fl_us = [
+mm_demo.categories.get("Flap - Ultra Shortcut").push(...[
     ["Esse", "22.329", ""],
     ["dxtrpog", "1.367",  "https://youtu.be/EoSNctH5PbQ"],
     ["Silhouette", "2.150",  "https://youtu.be/49-gAHGvNAA"]
-];
+]);
+//#endregion Midnight Motorist
 
-
-// Sinkhole
-
-sh_5l_ns = [
+//#region Sinkhole
+sh_demo.categories.get("5lap - No Shortcut").push(...[
     ["Decoy", "3:23.581", ""],
     ["JDFRG", "4:20.310", "https://www.youtube.com/watch?v=SEKfICRoAxQ&t=4970s"]
-];
+]);
 
-sh_fl_ns = [
+sh_demo.categories.get("Flap - No Shortcut").push(...[
     ["Decoy", "38.745", ""]
-];
+]);
 
-sh_5l_sc = [
+sh_demo.categories.get("5lap - Shortcut").push(...[
     
-];
+]);
 
-sh_fl_sc = [
+sh_demo.categories.get("Flap - Shortcut").push(...[
     
-];
+]);
 
-sh_5l_us = [
+sh_demo.categories.get("5lap - Ultra Shortcut").push(...[
     ["Silhouette", "54.793", ""],
     ["The_BLJ_Elite", "28.833",  "https://www.youtube.com/watch?v=AdR5bw3JaRc"]
-];
+]);
 
-sh_fl_us = [
+sh_demo.categories.get("Flap - Ultra Shortcut").push(...[
     ["Silhouette", "3.589", ""],
     ["The_BLJ_Elite", "1.150",  "https://www.youtube.com/watch?v=cmKW_wPXWcY"]
-];
+]);
+//#endregion Sinkhole
 
-
-// All tracks
-
-at_ns = [
+//#region All Tracks
+at_demo.categories.get("No Shortcut").push(...[
     ["Weasel", "19:55.867", "https://www.youtube.com/watch?v=FaYo6iWV4wo"]
-];
+]);
 
-at_sc = [
+at_demo.categories.get("Shortcut").push(...[
+
+]);
+
+at_demo.categories.get("Ultra Shortcut").push(...[
+
+]);
+
+//#endregion All Tracks
+
+//#endregion Demo Version
+
+//#region Beta Version
+
+const fh_beta = new Track("Fazbear Hills");
+const mm_beta = new Track("Midnight Motorist");
+const sh_beta = new Track("Sinkhole");
+
+const at_beta = new Category("All Tracks");
+
+//#region Fazbear Hills
+fh_beta.categories.get("5lap - No Shortcut").push(...[
+
+]);
+
+fh_beta.categories.get("Flap - No Shortcut").push(...[
     
-];
+]);
 
-at_us = [
+fh_beta.categories.get("5lap - Shortcut").push(...[
 
-];
+]);
 
-// Sort all lists by time
+fh_beta.categories.get("Flap - Shortcut").push(...[
 
-all_lists = [fh_5l_ns, fh_fl_ns, fh_5l_sc, fh_fl_sc, fh_5l_us, fh_fl_us, mm_5l_ns, mm_fl_ns, mm_5l_sc, mm_fl_sc, mm_5l_us, mm_fl_us, sh_5l_ns, sh_fl_ns, sh_5l_sc, sh_fl_sc, sh_5l_us, sh_fl_us];
-all_lists.forEach(list => {
-    list.sort((a, b) => {
-        const timeA = timeStringToSeconds(a[1]);
-        const timeB = timeStringToSeconds(b[1]);
-        return timeA - timeB;
+]);
+
+fh_beta.categories.get("5lap - Ultra Shortcut").push(...[
+    
+]);
+
+fh_beta.categories.get("Flap - Ultra Shortcut").push(...[
+    
+]);
+//#endregion Fazbear Hills
+
+//#region Midnight Motorist
+mm_beta.categories.get("5lap - No Shortcut").push(...[
+    
+]);
+
+mm_beta.categories.get("Flap - No Shortcut").push(...[
+    
+]);
+
+mm_beta.categories.get("5lap - Shortcut").push(...[
+    
+]);
+
+mm_beta.categories.get("Flap - Shortcut").push(...[
+    
+]);
+
+mm_beta.categories.get("5lap - Ultra Shortcut").push(...[
+    
+]);
+
+mm_beta.categories.get("Flap - Ultra Shortcut").push(...[
+    
+]);
+//#endregion Midnight Motorist
+
+//#region Sinkhole
+sh_beta.categories.get("5lap - No Shortcut").push(...[
+    
+]);
+
+sh_beta.categories.get("Flap - No Shortcut").push(...[
+    
+]);
+
+sh_beta.categories.get("5lap - Shortcut").push(...[
+    
+]);
+
+sh_beta.categories.get("Flap - Shortcut").push(...[
+    
+]);
+
+sh_beta.categories.get("5lap - Ultra Shortcut").push(...[
+    
+]);
+
+sh_beta.categories.get("Flap - Ultra Shortcut").push(...[
+    
+]);
+//#endregion Sinkhole
+
+//#region All Tracks
+at_beta.categories.get("No Shortcut").push(...[
+    
+]);
+
+at_beta.categories.get("Shortcut").push(...[
+
+]);
+
+at_beta.categories.get("Ultra Shortcut").push(...[
+
+]);
+
+//#endregion All Tracks
+
+//#endregion Beta Version
+
+//#region Sorting
+var all_lists = [fh_demo, mm_demo, sh_demo, at_demo, fh_beta, mm_beta, sh_beta, at_beta];
+all_lists.forEach(track => {
+    track.categories.forEach((value, key) => {
+        value.sort((a, b) => timeStringToSeconds(a[1]) - timeStringToSeconds(b[1]));
     });
 });
+//#endregion Sorting
 
-
-// Home page WRs
-
-function load_home_wrs(lists, categories, name) {
+//#region Home Page
+function load_home_wrs(track, name) {
     var ih = "<h3>World Records</h3><table><tr><th>Category</th><th>Player</th><th>Time</th></tr>";
-    for (i = 0; i < lists.length; i++) {
-        if (lists[i].length == 0) {
-            continue;
+
+    track.categories.forEach((value, key) => {
+        if (value.length == 0) {
+            return;
         }
 
-        ih += "<tr><td>" + categories[i] + "</td><td>" + lists[i][0][0] + "</td><td>" + lists[i][0][1] + "</td></tr>";
-    }
+        ih += "<tr><td>" + key + "</td><td>" + value[0][0] + "</td><td>" + value[0][1] + "</td></tr>";
+    });
+
     ih += "</table>";
 
     document.getElementById(name).innerHTML = ih;
 }
 
 function load_home() {
-    load_home_wrs(
-        [fh_5l_ns, fh_5l_sc, fh_5l_us, fh_fl_ns, fh_fl_sc, fh_fl_us],
-        ["5lap - No Shortcut", "5lap - Shortcut", "5lap - Ultra Shortcut", "Flap - No Shortcut", "Flap - Shortcut", "Flap - Ultra Shortcut"],
-        "wrs_fh"
-    );
+    load_home_wrs(fh_demo, "wrs_fh");
 
-    load_home_wrs(
-        [mm_5l_ns, mm_5l_sc, mm_5l_us, mm_fl_ns, mm_fl_sc, mm_fl_us],
-        ["5lap - No Shortcut", "5lap - Shortcut", "5lap - Ultra Shortcut", "Flap - No Shortcut", "Flap - Shortcut", "Flap - Ultra Shortcut"],
-        "wrs_mm"
-    );
+    load_home_wrs(mm_demo, "wrs_mm");
 
-    load_home_wrs(
-        [sh_5l_ns, sh_5l_sc, sh_5l_us, sh_fl_ns, sh_fl_sc, sh_fl_us],
-        ["5lap - No Shortcut", "5lap - Shortcut", "5lap - Ultra Shortcut", "Flap - No Shortcut", "Flap - Shortcut", "Flap - Ultra Shortcut"],
-        "wrs_sh"
-    );
+    load_home_wrs(sh_demo, "wrs_sh");
 }
+//#endregion Home Page
 
+//#region Leaderboards
+function load_backend(track, names) {
+    var count = 0;
 
-// Load leaderboards
-
-function load_backend(lists, names, titles) {
-    for (i = 0; i < lists.length; i++) {
+    track.categories.forEach((value, key) => {
         var seenNames = [];
 
-        var ih = "<h2>"+ titles[i] + "</h2><table><tr><th>Player</th><th>Time</th></tr>";
-        for (j = 0; j < lists[i].length; j++) {
-            if (seenNames.includes(lists[i][j][0])) {
+        var ih = "<table><tr><th colspan='2'>" + key + "</th></tr><tr><th>Player</th><th>Time</th></tr>";
+        for (i = 0; i < value.length; i++) {
+            if (seenNames.includes(value[i][0])) {
                 continue;
             }
-            if (lists[i][j][2] == "") {
-                ih += "<tr><td>" + (j + 1) + ". " + lists[i][j][0] + "</td><td>" + lists[i][j][1] + "</td></tr>";
+            if (value[i][2] == "") {
+                ih += "<tr><td>" + (i + 1) + ". " + value[i][0] + "</td><td>" + value[i][1] + "</td></tr>";
             } else {
-                ih += "<tr><td><a href='" + lists[i][j][2] + "' target='_blank'>" + (j + 1) + ". " + lists[i][j][0] + "</a></td><td><a href='" + lists[i][j][2] + "'>" + lists[i][j][1] + "</a></td></tr>";
+                ih += "<tr><td><a href='" + value[i][2] + "' target='_blank'>" + (i + 1) + ". " + value[i][0] + "</a></td><td><a href='" + value[i][2] + "'>" + value[i][1] + "</a></td></tr>";
             }
         }
+
         ih += "</table>";
 
-        document.getElementById(names[i]).innerHTML = ih;
-    }
+        document.getElementById(names[count]).innerHTML = ih;
+        count++;
+    });
 }
 
 function fh_load() {
-    load_backend(
-        [fh_5l_ns, fh_fl_ns, fh_5l_sc, fh_fl_sc, fh_5l_us, fh_fl_us], 
-        ["fh-ns-5l", "fh-ns-fl", "fh-sc-5l", "fh-sc-fl", "fh-us-5l", "fh-us-fl"], 
-        ["5lap - No Shortcut", "Flap - No Shortcut", "5lap - Shortcut", "Flap - Shortcut", "5lap - Ultra Shortcut", "Flap - Ultra Shortcut"]
-    );
+    load_backend(fh_demo, ["fh-ns-5l-demo", "fh-ns-fl-demo", "fh-sc-5l-demo", "fh-sc-fl-demo", "fh-us-5l-demo", "fh-us-fl-demo"]);
+    load_backend(fh_beta, ["fh-ns-5l-beta", "fh-ns-fl-beta", "fh-sc-5l-beta", "fh-sc-fl-beta", "fh-us-5l-beta", "fh-us-fl-beta"]);
 }
 
 function mm_load() {
-    load_backend(
-        [mm_5l_ns, mm_fl_ns, mm_5l_sc, mm_fl_sc, mm_5l_us, mm_fl_us],
-        ["mm-ns-5l", "mm-ns-fl", "mm-sc-5l", "mm-sc-fl", "mm-us-5l", "mm-us-fl"],
-        ["5lap - No Shortcut", "Flap - No Shortcut", "5lap - Shortcut", "Flap - Shortcut", "5lap - Ultra Shortcut", "Flap - Ultra Shortcut"]
-    );
+    load_backend(mm_demo, ["mm-ns-5l-demo", "mm-ns-fl-demo", "mm-sc-5l-demo", "mm-sc-fl-demo", "mm-us-5l-demo", "mm-us-fl-demo"]);
+    load_backend(mm_beta, ["mm-ns-5l-beta", "mm-ns-fl-beta", "mm-sc-5l-beta", "mm-sc-fl-beta", "mm-us-5l-beta", "mm-us-fl-beta"]);
 }
 
 function sh_load() {
-    load_backend(
-        [sh_5l_ns, sh_fl_ns, sh_5l_sc, sh_fl_sc, sh_5l_us, sh_fl_us],
-        ["sh-ns-5l", "sh-ns-fl", "sh-sc-5l", "sh-sc-fl", "sh-us-5l", "sh-us-fl"],
-        ["5lap - No Shortcut", "Flap - No Shortcut", "5lap - Shortcut", "Flap - Shortcut", "5lap - Ultra Shortcut", "Flap - Ultra Shortcut"]
-    )
+    load_backend(sh_demo, ["sh-ns-5l-demo", "sh-ns-fl-demo", "sh-sc-5l-demo", "sh-sc-fl-demo", "sh-us-5l-demo", "sh-us-fl-demo"]);
+    load_backend(sh_beta, ["sh-ns-5l-beta", "sh-ns-fl-beta", "sh-sc-5l-beta", "sh-sc-fl-beta", "sh-us-5l-beta", "sh-us-fl-beta"]);
 }
 
 function at_load() {
-    load_backend(
-        [at_ns, at_sc, at_us],
-        ["at-ns", "at-sc", "at-us"],
-        ["No Shortcut", "Shortcut", "Ultra Shortcut"]
-    );
+    load_backend(at_demo, ["at-ns-demo", "at-sc-demo", "at-us-demo"]);
+
+    load_backend(at_beta, ["at-ns-beta", "at-sc-beta", "at-us-beta"]);
 }
+//#endregion Leaderboards
