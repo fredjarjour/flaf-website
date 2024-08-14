@@ -271,10 +271,20 @@ all_lists.forEach(track => {
 //#endregion Sorting
 
 //#region Home Page
-function load_home_wrs(track, name) {
-    var ih = "<h3>World Records</h3><table><tr><th>Category</th><th>Player</th><th>Time</th></tr>";
+function load_home_wrs(track_demo, track_beta, name) {
+    var ih = "<table><tr><th colspan='3'><u>World Records</u></th><tr><th colspan='3'>Demo Version</th></tr><tr><th>Category</th><th>Player</th><th>Time</th></tr>";
 
-    track.categories.forEach((value, key) => {
+    track_demo.categories.forEach((value, key) => {
+        if (value.length == 0) {
+            return;
+        }
+
+        ih += "<tr><td>" + key + "</td><td>" + value[0][0] + "</td><td>" + value[0][1] + "</td></tr>";
+    });
+
+    ih += "<tr><th colspan='3'>Beta Version</th></tr><tr><th>Category</th><th>Player</th><th>Time</th></tr>"
+
+    track_beta.categories.forEach((value, key) => {
         if (value.length == 0) {
             return;
         }
@@ -288,11 +298,11 @@ function load_home_wrs(track, name) {
 }
 
 function load_home() {
-    load_home_wrs(fh_demo, "wrs_fh");
+    load_home_wrs(fh_demo, fh_beta, "wrs_fh");
 
-    load_home_wrs(mm_demo, "wrs_mm");
+    load_home_wrs(mm_demo, mm_beta, "wrs_mm");
 
-    load_home_wrs(sh_demo, "wrs_sh");
+    load_home_wrs(sh_demo, sh_beta, "wrs_sh");
 }
 //#endregion Home Page
 
