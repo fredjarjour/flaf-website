@@ -19,14 +19,14 @@ fh_5l_ns = [
     ["Decoy", "2:10.901", ""],
     ["Silhouette", "2:13.276", ""],
     ["Rinify", "1:58.199", "https://www.youtube.com/watch?v=oVw5Eg3gQ8k"],
-    ["Fred", "2:17.933", ""],
+    ["Fred", "2:11.918", "https://www.youtube.com/watch?v=gm57r_DxcfY"],
     ["Gavin", "2:19.847", "https://www.youtube.com/watch?v=HvQ4-pAQLyw"],
     ["JDFRG", "2:29.538", "https://www.youtube.com/watch?v=h4wegL-yhpI"]
 ];
 
 fh_fl_ns = [
     ["Silhouette", "24.772", ""],
-    ["Fred", "24.882", ""],
+    ["Fred", "23.860", "https://www.youtube.com/watch?v=gm57r_DxcfY"],
     ["Decoy", "23.967",  "https://youtu.be/h2Sk5oqIBIc"],
     ["Rinify", "23.200", "https://www.youtube.com/watch?v=oVw5Eg3gQ8k"]
 ];
