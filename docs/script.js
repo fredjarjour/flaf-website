@@ -168,7 +168,7 @@ const at_beta = new Category("All Tracks");
 
 //#region Fazbear Hills
 fh_beta.categories.get("5lap - No Shortcut").push(...[
-
+    ["Fred", "2:08.711", "https://www.youtube.com/watch?v=DfXhWeWv_Do"]
 ]);
 
 fh_beta.categories.get("Flap - No Shortcut").push(...[
