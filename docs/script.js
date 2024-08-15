@@ -184,7 +184,7 @@ fh_beta.categories.get("Flap - Shortcut").push(...[
 ]);
 
 fh_beta.categories.get("5lap - Ultra Shortcut").push(...[
-    
+    ["Weasel", "1:41.544", "https://www.youtube.com/watch?v=QrXIkvano-Y"]
 ]);
 
 fh_beta.categories.get("Flap - Ultra Shortcut").push(...[
@@ -194,7 +194,7 @@ fh_beta.categories.get("Flap - Ultra Shortcut").push(...[
 
 //#region Midnight Motorist
 mm_beta.categories.get("5lap - No Shortcut").push(...[
-    
+    ["Silhouette", "3:47.593",  "https://www.youtube.com/watch?v=ItDOKP9f8vw"]
 ]);
 
 mm_beta.categories.get("Flap - No Shortcut").push(...[
