@@ -307,10 +307,15 @@ function load_home() {
 //#endregion Home Page
 
 //#region Leaderboards
+const order = ["5lap - No Shortcut", "Flap - No Shortcut", "5lap - Shortcut", "Flap - Shortcut", "5lap - Ultra Shortcut", "Flap - Ultra Shortcut"];
+
 function load_backend(track, names) {
     var count = 0;
 
-    track.categories.forEach((value, key) => {
+
+    order.forEach(key => {
+        var value = track.categories.get(key);
+        
         var seenNames = [];
 
         var ih = "<table><tr><th colspan='2'>" + key + "</th></tr><tr><th>Player</th><th>Time</th></tr>";
