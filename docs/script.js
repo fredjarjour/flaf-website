@@ -96,8 +96,8 @@ mm_demo.categories.get("5lap - Shortcut").push(...[
 ]);
 
 mm_demo.categories.get("Flap - Shortcut").push(...[
-    ["MyntiFresh", "34.262", "https://youtu.be/gaXgvwPLkS8"],
-    ["Stasious", "33.296",  "https://youtu.be/1RPBnmSQ4vo"]
+    ["Stasious", "33.296",  "https://youtu.be/1RPBnmSQ4vo"],
+    ["MyntiFresh", "33.146", "https://youtu.be/jT5fQPeNcCE"]
 ]);
 
 mm_demo.categories.get("5lap - Ultra Shortcut").push(...[
@@ -168,7 +168,7 @@ const at_beta = new Category("All Tracks");
 
 //#region Fazbear Hills
 fh_beta.categories.get("5lap - No Shortcut").push(...[
-    ["Fred", "2:08.711", "https://www.youtube.com/watch?v=DfXhWeWv_Do"]
+    
 ]);
 
 fh_beta.categories.get("Flap - No Shortcut").push(...[
@@ -198,7 +198,7 @@ mm_beta.categories.get("5lap - No Shortcut").push(...[
 ]);
 
 mm_beta.categories.get("Flap - No Shortcut").push(...[
-    
+    ["Rinify", "0:39.667", "https://www.youtube.com/watch?v=-5Q1oVSVqbY"]
 ]);
 
 mm_beta.categories.get("5lap - Shortcut").push(...[
@@ -220,7 +220,7 @@ mm_beta.categories.get("Flap - Ultra Shortcut").push(...[
 
 //#region Sinkhole
 sh_beta.categories.get("5lap - No Shortcut").push(...[
-    
+    ["Rinify", "2:57.183", "https://www.youtube.com/watch?v=OqNpna3ssHk"]
 ]);
 
 sh_beta.categories.get("Flap - No Shortcut").push(...[
@@ -270,9 +270,9 @@ all_lists.forEach(track => {
 });
 //#endregion Sorting
 
-//#region Home Page
-function load_home_wrs(track_demo, track_beta, name) {
-    var ih = "<table><tr><th colspan='3'><u>World Records</u></th><tr><th colspan='3'>Demo Version</th></tr><tr><th>Category</th><th>Player</th><th>Time</th></tr>";
+//#region Home Pages
+function load_home_wrs(track_demo, track_beta, name, trackName) {
+    var ih = "<table><tr><th colspan='3'><a href='demo/" + trackName + ".html'>Demo Version</a></th></tr><tr><th>Category</th><th>Player</th><th>Time</th></tr>";
 
     track_demo.categories.forEach((value, key) => {
         if (value.length == 0) {
@@ -282,7 +282,7 @@ function load_home_wrs(track_demo, track_beta, name) {
         ih += "<tr><td>" + key + "</td><td>" + value[0][0] + "</td><td>" + value[0][1] + "</td></tr>";
     });
 
-    ih += "<tr><th colspan='3'>Beta Version</th></tr><tr><th>Category</th><th>Player</th><th>Time</th></tr>"
+    ih += "<tr><th colspan='3'><a href='beta/" + trackName + ".html'>Beta Version</a></th></tr><tr><th>Category</th><th>Player</th><th>Time</th></tr>"
 
     track_beta.categories.forEach((value, key) => {
         if (value.length == 0) {
@@ -298,18 +298,52 @@ function load_home_wrs(track_demo, track_beta, name) {
 }
 
 function load_home() {
-    load_home_wrs(fh_demo, fh_beta, "wrs_fh");
+    load_home_wrs(fh_demo, fh_beta, "wrs_fh", "fazbearhills");
 
-    load_home_wrs(mm_demo, mm_beta, "wrs_mm");
+    load_home_wrs(mm_demo, mm_beta, "wrs_mm", "midnightmotorist");
 
-    load_home_wrs(sh_demo, sh_beta, "wrs_sh");
+    load_home_wrs(sh_demo, sh_beta, "wrs_sh", "sinkhole");
+}
+
+function load_version_wrs(track, name) {
+    var ih = "<table><tr><th colspan='3'><u>World Records</u></th><tr><th>Category</th><th>Player</th><th>Time</th></tr>";
+
+    track.categories.forEach((value, key) => {
+        if (value.length == 0) {
+            return;
+        }
+
+        ih += "<tr><td>" + key + "</td><td>" + value[0][0] + "</td><td>" + value[0][1] + "</td></tr>";
+    });
+
+    ih += "</table>";
+
+    document.getElementById(name).innerHTML = ih;
+}
+
+function load_demo() {
+    load_version_wrs(fh_demo, "wrs_fh");
+
+    load_version_wrs(mm_demo, "wrs_mm");
+
+    load_version_wrs(sh_demo, "wrs_sh");
+}
+
+function load_beta() {
+    load_version_wrs(fh_beta, "wrs_fh");
+
+    load_version_wrs(mm_beta, "wrs_mm");
+
+    load_version_wrs(sh_beta, "wrs_sh");
 }
 //#endregion Home Page
 
 //#region Leaderboards
 const order = ["5lap - No Shortcut", "Flap - No Shortcut", "5lap - Shortcut", "Flap - Shortcut", "5lap - Ultra Shortcut", "Flap - Ultra Shortcut"];
+const names = ["ns-5l", "ns-fl", "sc-5l", "sc-fl", "us-5l", "us-fl"];
 
-function load_backend(track, names) {
+
+function load_backend(track) {
     var count = 0;
 
 
@@ -337,24 +371,28 @@ function load_backend(track, names) {
     });
 }
 
-function fh_load() {
-    load_backend(fh_demo, ["fh-ns-5l-demo", "fh-ns-fl-demo", "fh-sc-5l-demo", "fh-sc-fl-demo", "fh-us-5l-demo", "fh-us-fl-demo"]);
-    load_backend(fh_beta, ["fh-ns-5l-beta", "fh-ns-fl-beta", "fh-sc-5l-beta", "fh-sc-fl-beta", "fh-us-5l-beta", "fh-us-fl-beta"]);
+function fh_demo_load() {
+    load_backend(fh_demo);
 }
 
-function mm_load() {
-    load_backend(mm_demo, ["mm-ns-5l-demo", "mm-ns-fl-demo", "mm-sc-5l-demo", "mm-sc-fl-demo", "mm-us-5l-demo", "mm-us-fl-demo"]);
-    load_backend(mm_beta, ["mm-ns-5l-beta", "mm-ns-fl-beta", "mm-sc-5l-beta", "mm-sc-fl-beta", "mm-us-5l-beta", "mm-us-fl-beta"]);
+function mm_demo_load() {
+    load_backend(mm_demo);
 }
 
-function sh_load() {
-    load_backend(sh_demo, ["sh-ns-5l-demo", "sh-ns-fl-demo", "sh-sc-5l-demo", "sh-sc-fl-demo", "sh-us-5l-demo", "sh-us-fl-demo"]);
-    load_backend(sh_beta, ["sh-ns-5l-beta", "sh-ns-fl-beta", "sh-sc-5l-beta", "sh-sc-fl-beta", "sh-us-5l-beta", "sh-us-fl-beta"]);
+function sh_demo_load() {
+    load_backend(sh_demo);
 }
 
-function at_load() {
-    load_backend(at_demo, ["at-ns-demo", "at-sc-demo", "at-us-demo"]);
-
-    load_backend(at_beta, ["at-ns-beta", "at-sc-beta", "at-us-beta"]);
+function fh_beta_load() {
+    load_backend(fh_beta);
 }
+
+function mm_beta_load() {
+    load_backend(mm_beta);
+}
+
+function sh_beta_load() {
+    load_backend(sh_beta);
+}
+
 //#endregion Leaderboards
