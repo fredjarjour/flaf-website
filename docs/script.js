@@ -214,7 +214,7 @@ mm_beta.categories.get("5lap - Ultra Shortcut").push(...[
 ]);
 
 mm_beta.categories.get("Flap - Ultra Shortcut").push(...[
-    
+    ["MyntiFresh", "00:32.717", "https://www.youtube.com/watch?v=s4SFQVI3VWg"]
 ]);
 //#endregion Midnight Motorist
 
