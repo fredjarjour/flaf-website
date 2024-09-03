@@ -97,7 +97,7 @@ mm_demo.categories.get("5lap - Shortcut").push(...[
 
 mm_demo.categories.get("Flap - Shortcut").push(...[
     ["Stasious", "33.296",  "https://youtu.be/1RPBnmSQ4vo"],
-    ["MyntiFresh", "33.146", "https://youtu.be/jT5fQPeNcCE"]
+    ["MyntiFresh", "32.719", "https://www.youtube.com/watch?v=s4SFQVI3VWg"]
 ]);
 
 mm_demo.categories.get("5lap - Ultra Shortcut").push(...[
@@ -198,7 +198,7 @@ mm_beta.categories.get("5lap - No Shortcut").push(...[
 ]);
 
 mm_beta.categories.get("Flap - No Shortcut").push(...[
-    ["Rinify", "0:39.667", "https://www.youtube.com/watch?v=-5Q1oVSVqbY"]
+    ["Rinify", "39.667", "https://www.youtube.com/watch?v=-5Q1oVSVqbY"]
 ]);
 
 mm_beta.categories.get("5lap - Shortcut").push(...[
@@ -206,7 +206,7 @@ mm_beta.categories.get("5lap - Shortcut").push(...[
 ]);
 
 mm_beta.categories.get("Flap - Shortcut").push(...[
-    ["MyntiFresh", "00:32.719", "https://www.youtube.com/watch?v=s4SFQVI3VWg"]
+    
 ]);
 
 mm_beta.categories.get("5lap - Ultra Shortcut").push(...[
