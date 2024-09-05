@@ -168,7 +168,7 @@ const at_beta = new Category("All Tracks");
 
 //#region Fazbear Hills
 fh_beta.categories.get("5lap - No Shortcut").push(...[
-    
+    ["Rinify", "1:51.850", "https://www.youtube.com/watch?v=yFF5Tb5ELbY"]
 ]);
 
 fh_beta.categories.get("Flap - No Shortcut").push(...[
