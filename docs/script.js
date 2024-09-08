@@ -185,7 +185,8 @@ fh_beta.categories.get("Flap - Shortcut").push(...[
 ]);
 
 fh_beta.categories.get("5lap - Ultra Shortcut").push(...[
-    ["Weasel", "1:41.544", "https://www.youtube.com/watch?v=QrXIkvano-Y"]
+    ["Weasel", "1:41.544", "https://www.youtube.com/watch?v=QrXIkvano-Y"],
+    ["ÄmpäriPiraatti", "35.700", "https://youtu.be/gZ7o7PPy06Y?si=AytdEnitZ7ksoM33"]
 ]);
 
 fh_beta.categories.get("Flap - Ultra Shortcut").push(...[
