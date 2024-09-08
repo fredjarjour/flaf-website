@@ -221,7 +221,7 @@ mm_beta.categories.get("Flap - Ultra Shortcut").push(...[
 
 //#region Sinkhole
 sh_beta.categories.get("5lap - No Shortcut").push(...[
-    ["Rinify", "2:49.067", "https://www.youtube.com/watch?v=-eab8pW1zTw"]
+    ["Rinify", "2:52.000", "https://www.youtube.com/watch?v=UJEIc9YIpUg"]
 ]);
 
 sh_beta.categories.get("Flap - No Shortcut").push(...[
@@ -229,7 +229,7 @@ sh_beta.categories.get("Flap - No Shortcut").push(...[
 ]);
 
 sh_beta.categories.get("5lap - Shortcut").push(...[
-    
+    ["Rinify", "2:49.067", "https://www.youtube.com/watch?v=-eab8pW1zTw"]
 ]);
 
 sh_beta.categories.get("Flap - Shortcut").push(...[
