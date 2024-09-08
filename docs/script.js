@@ -398,4 +398,43 @@ function sh_beta_load() {
     load_backend(sh_beta);
 }
 
+const order_category = ["No Shortcut", "Shortcut", "Ultra Shortcut"];
+const names_category = ["ns", "sc", "us"];
+
+function load_backend_category(category) {
+    var count = 0;
+
+
+    order_category.forEach(key => {
+        var value = category.categories.get(key);
+        
+        var seenNames = [];
+
+        var ih = "<table><tr><th colspan='2'>" + key + "</th></tr><tr><th>Player</th><th>Time</th></tr>";
+        for (i = 0; i < value.length; i++) {
+            if (seenNames.includes(value[i][0])) {
+                continue;
+            }
+            if (value[i][2] == "") {
+                ih += "<tr><td>" + (i + 1) + ". " + value[i][0] + "</td><td>" + value[i][1] + "</td></tr>";
+            } else {
+                ih += "<tr><td><a href='" + value[i][2] + "' target='_blank'>" + (i + 1) + ". " + value[i][0] + "</a></td><td><a href='" + value[i][2] + "'>" + value[i][1] + "</a></td></tr>";
+            }
+        }
+
+        ih += "</table>";
+
+        document.getElementById(names_category[count]).innerHTML = ih;
+        count++;
+    });
+}
+
+function at_demo_load() {
+    load_backend_category(at_demo);
+}
+
+function at_beta_load() {
+    load_backend_category(at_beta);
+}
+
 //#endregion Leaderboards
