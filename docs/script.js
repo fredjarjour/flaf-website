@@ -196,7 +196,8 @@ fh_beta.categories.get("Flap - Ultra Shortcut").push(...[
 
 //#region Midnight Motorist
 mm_beta.categories.get("5lap - No Shortcut").push(...[
-    ["Silhouette", "3:47.593",  "https://www.youtube.com/watch?v=ItDOKP9f8vw"]
+    ["Silhouette", "3:47.593",  "https://www.youtube.com/watch?v=ItDOKP9f8vw"],
+    ["Rinify", "3:26.767", "https://www.youtube.com/watch?v=-h2XHFC9mgQ"]
 ]);
 
 mm_beta.categories.get("Flap - No Shortcut").push(...[
