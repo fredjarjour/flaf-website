@@ -186,7 +186,7 @@ fh_beta.categories.get("Flap - Shortcut").push(...[
 
 fh_beta.categories.get("5lap - Ultra Shortcut").push(...[
     ["Weasel", "1:41.544", "https://www.youtube.com/watch?v=QrXIkvano-Y"],
-    ["ÄmpäriPiraatti", "35.700", "https://youtu.be/gZ7o7PPy06Y?si=AytdEnitZ7ksoM33"]
+    ["ÄmpäriPiraatti", "19.767", "https://www.youtube.com/watch?v=hsUyJ9JNr00"]
 ]);
 
 fh_beta.categories.get("Flap - Ultra Shortcut").push(...[
@@ -205,15 +205,15 @@ mm_beta.categories.get("Flap - No Shortcut").push(...[
 ]);
 
 mm_beta.categories.get("5lap - Shortcut").push(...[
-    
+    ["Rinify", "2:51.767", "https://www.youtube.com/watch?v=tiCZaTp_OTU"]
 ]);
 
 mm_beta.categories.get("Flap - Shortcut").push(...[
-    
+    ["Rinify", "32.717", "https://youtu.be/tiCZaTp_OTU?si=wIZkVntme5fw0aIg&t=147"]
 ]);
 
 mm_beta.categories.get("5lap - Ultra Shortcut").push(...[
-    
+    ["AToastWithEve", "35.833", "https://www.youtube.com/watch?v=AFcLrR5lf3A"]
 ]);
 
 mm_beta.categories.get("Flap - Ultra Shortcut").push(...[
