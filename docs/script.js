@@ -240,7 +240,7 @@ sh_beta.categories.get("Flap - Shortcut").push(...[
 ]);
 
 sh_beta.categories.get("5lap - Ultra Shortcut").push(...[
-    
+    ["ÄmpäriPiraatti", "13.967", "https://youtu.be/8INlbnKQ8To?si=lxSSJ3ORwZdpFMkk"]
 ]);
 
 sh_beta.categories.get("Flap - Ultra Shortcut").push(...[
