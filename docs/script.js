@@ -133,7 +133,7 @@ sh_demo.categories.get("Flap - Shortcut").push(...[
 sh_demo.categories.get("5lap - Ultra Shortcut").push(...[
     ["Silhouette", "54.793", ""],
     ["The_BLJ_Elite", "28.833",  "https://www.youtube.com/watch?v=AdR5bw3JaRc"],
-    ["MyntiFresh", "17.168", "https://www.youtube.com/watch?v=t6p_b57rZZo"]
+    ["MyntiFresh", "16.879", "https://youtu.be/RWFI2Yd44c4?si=V5FVTyq8zlA2dKqj"]
 ]);
 
 sh_demo.categories.get("Flap - Ultra Shortcut").push(...[
